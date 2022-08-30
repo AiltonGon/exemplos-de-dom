@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pr-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notas do aluno</title>
+    <style>
+      body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: linear-gradient(to right, darkblue, darkred);
+    color: white;
+    box-sizing: border-box;
+}
+p{
+  text-align: center;
+}
+
+main{
+    background-color: pink;
+    padding: .8em;
+    display: flex;
+    flex-direction: column;
+    height: 40vh;
+    justify-content: space-around;
+    color: black;
+    border-radius: 1em;
+    box-shadow: 2px 2px 2px black;
+}
+input, button{
+    padding: .4em;
+    outline: none;
+    border: none;
+}
+
+button{
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+button:hover{
+    opacity: 1;
+}
+    </style>
+</head>
+<body>
+  <header>
+    <h1> Questao 3 </h1>
+
+  <p>Notas do aluno</p>
+  
+  </header>
+  <main>
+    Primeira nota <input id="nota1" type="number"> <br />
+    Segunda nota <input id="nota2" type="number"> <br />
+    terceira nota <input id="nota3" type="number"> <br />
+    quarta nota <input id="nota4" type="number"> <br />
+    <button onclick="media()">Calcular Media</button>
+ 
+    <script type="text/javascript">
+ 
+     function media(){
+      var nota1 = parseFloat(document.getElementById("nota1").value);
+      var nota2 = parseFloat(document.getElementById("nota2").value);
+      var nota3 = parseFloat(document.getElementById("nota3").value);
+      var nota4 = parseFloat(document.getElementById("nota4").value);
+ 
+      var media = (nota1 + nota2 + nota3 + nota4)/4 ;
+
+      alert(`a media do aluno foi de ${media}`)
+ 
+     }
+  </script>
+  </main>
+  <footer>
+    <p>&copy;Ailton Gonçalves</p>
+  </footer>
+
+ 
+</body>
+</html>
